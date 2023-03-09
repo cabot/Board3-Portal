@@ -1,7 +1,7 @@
 {% INCLUDE 'overall_header.html' %}
 {% INCLUDE 'portal/_block_config.html' %}
 
-<div id="portal-body" role="grid">
+<div id="portal-body" class="portal-body" style="--left-col-width: {% if not definition.S_COLUMNS_WIDTH_OVERRIDE %}{{ S_PORTAL_LEFT_COLUMN }}{% else %}{{ definition.PORTAL_LEFT_COLUMN_OVERRIDE }}{% endif %}px; --right-col-width: {% if not definition.S_COLUMNS_WIDTH_OVERRIDE %}{{ S_PORTAL_RIGHT_COLUMN }}{% else %}{{ definition.PORTAL_RIGHT_COLUMN_OVERRIDE }}{% endif %}px;" role="grid">
 	{% if S_TOP_COLUMN %}
 	<div id="portal-top" role="rowgroup">
 	<!-- [+] top module area -->
@@ -25,10 +25,11 @@
 	<!-- [-] top module area -->
 	</div>
 	{% endif %}
+
 	<!-- [+] center module area -->
 	{% if S_CENTER_COLUMN %}
-	<div id="portal-center-wrapper">
-		<div id="portal-center" style="margin: 0 {% if S_RIGHT_COLUMN %}{{ S_PORTAL_RIGHT_COLUMN }}px{% else %}-{{ definition.BLOCK_DISTANCE }}{% endif %} 0 {% if S_LEFT_COLUMN %}{{ S_PORTAL_LEFT_COLUMN }}px{% else %}-{{ definition.BLOCK_DISTANCE }}{% endif %}; padding: 0 {{ definition.BLOCK_DISTANCE }};" role="rowgroup">
+	<div id="portal-center-wrapper" class="portal-center-wrapper">
+		<div id="portal-center" role="rowgroup">
 			{% for modules_center in loops.modules_center %}
 				{% DEFINE TEMPLATE_FILE = ''~ modules_center.TEMPLATE_FILE ~'' %}
 				{% DEFINE IMAGE_SRC = ''~ modules_center.IMAGE_SRC ~'' %}
@@ -43,16 +44,17 @@
 				{% INCLUDE ''~ definition.TEMPLATE_FILE ~'' %}
 			{% endfor %}
 			{% if S_DISPLAY_JUMPBOX and B3P_DISPLAY_JUMPBOX %}
-				<br />
+				<br>
 				{% INCLUDE 'portal/modules/jumpbox.html' %}
 			{% endif %}
 		</div>
 	</div>
 	{% endif %}
 	<!-- [-] center module area -->
+
 	<!-- [+] left module area -->
 		{% if S_LEFT_COLUMN %}
-		<div id="portal-left" style="width: {{ S_PORTAL_LEFT_COLUMN }}px;" role="rowgroup">
+		<div id="portal-left" role="rowgroup">
 			{% for modules_left in loops.modules_left %}
 				{% DEFINE TEMPLATE_FILE = ''~ modules_left.TEMPLATE_FILE ~'' %}
 				{% DEFINE IMAGE_SRC = ''~ modules_left.IMAGE_SRC ~'' %}
@@ -72,7 +74,7 @@
 
 	<!-- [+] right module area -->
 		{% if S_RIGHT_COLUMN %}
-		<div id="portal-right" style="width: {{ S_PORTAL_RIGHT_COLUMN }}px; margin-{% if S_CONTENT_DIRECTION eq 'rtl' %}right{% else %}left{% endif %}: -{{ S_PORTAL_RIGHT_COLUMN }}px;" data-width="{{ S_PORTAL_RIGHT_COLUMN }}" role="rowgroup">
+		<div id="portal-right" role="rowgroup">
 			{% for modules_right in loops.modules_right %}
 				{% DEFINE TEMPLATE_FILE = ''~ modules_right.TEMPLATE_FILE ~'' %}
 				{% DEFINE IMAGE_SRC = ''~ modules_right.IMAGE_SRC ~'' %}
@@ -89,7 +91,8 @@
 		</div>
 		{% endif %}
 	<!-- [-] right module area -->
-	<br class="portal-clear" />
+
+	<!-- <br class="portal-clear" /> -->
 	{% if S_BOTTOM_COLUMN %}
 	<div id="portal-bottom" role="rowgroup">
 	<!-- [+] bottom module area -->
@@ -117,8 +120,5 @@
 
 <!--// board3 Portal by www.board3.de //-->
 <div class="copyright b3p-copyright">Powered by <a href="https://www.board3.de/">Board3 Portal</a> &copy; 2009 - 2023 Board3 Group</div>
-
-{% INCLUDEJS 'portal/assets/jquery.getscrollbarwidth.js' %}
-{% INCLUDEJS 'portal/assets/portal.js' %}
 
 {% INCLUDE 'overall_footer.html' %}

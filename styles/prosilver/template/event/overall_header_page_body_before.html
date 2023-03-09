@@ -1,7 +1,7 @@
 {% if S_PORTAL_ALL === true %}
+{% INCLUDE 'portal/_block_config.html' %}
 <div id="portal-page-body">
-<div id="portal-body">
-<div class="portal-body-wrapper">
-	{% INCLUDE 'portal/_block_config.html' %}
-	<div class="portal-body-center" style="margin: {% if S_CONTENT_DIRECTION eq 'rtl' %}0 {% if S_LEFT_COLUMN %}{{ S_PORTAL_LEFT_COLUMN }}px{% else %}-{{ definition.BLOCK_DISTANCE }}{% endif %} 0 {% if S_RIGHT_COLUMN %}{{ S_PORTAL_RIGHT_COLUMN }}px{% else %}-{{ definition.BLOCK_DISTANCE }}{% endif %}{% else %}0 {% if S_RIGHT_COLUMN %}{{ S_PORTAL_RIGHT_COLUMN }}px{% else %}-{{ definition.BLOCK_DISTANCE }}{% endif %} 0 {% if S_LEFT_COLUMN %}{{ S_PORTAL_LEFT_COLUMN }}px{% else %}-{{ definition.BLOCK_DISTANCE }}{% endif %}{% endif %}; padding: 0 {{ definition.BLOCK_DISTANCE }};">
+	<div id="portal-body" class="portal-body" style="--left-col-width: {% if not definition.S_COLUMNS_WIDTH_OVERRIDE %}{{ S_PORTAL_LEFT_COLUMN }}{% else %}{{ definition.PORTAL_LEFT_COLUMN_OVERRIDE }}{% endif %}px; --right-col-width: {% if not definition.S_COLUMNS_WIDTH_OVERRIDE %}{{ S_PORTAL_RIGHT_COLUMN }}{% else %}{{ definition.PORTAL_RIGHT_COLUMN_OVERRIDE }}{% endif %}px;">
+		<div class="portal-body-wrapper" style="padding:{% if S_CONTENT_DIRECTION eq 'rtl' %}{% if S_RIGHT_COLUMN %}0 0 0 {{ definition.BLOCK_DISTANCE }}{% else %}0 {{ definition.BLOCK_DISTANCE }} 0 0{% endif %}{% else %}{% if S_RIGHT_COLUMN %}0 {{ definition.BLOCK_DISTANCE }} 0 0{% else %}0 0 0 {{ definition.BLOCK_DISTANCE }}{% endif %}{% endif %};">
+			<div class="portal-body-center">
 {% endif %}
