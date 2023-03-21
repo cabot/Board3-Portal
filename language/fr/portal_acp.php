@@ -1,10 +1,10 @@
 <?php
 /**
 *
-* @package Board3 Portal v2.1
-* @copyright (c) 2014 Board3 Group ( www.board3.de )
-* @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
-* @translated into French by Galixte (http://www.galixte.com)
+* @package Board3 Portal v2.3
+* @copyright (c) 2023 Board3 Group ( www.board3.de )
+* @license GNU General Public License, version 2 (GPL-2.0-only)
+* French translation by Galixte (https://www.galixte.com)
 *
 */
 
@@ -18,7 +18,7 @@ if (!defined('IN_PHPBB'))
 
 if (empty($lang) || !is_array($lang))
 {
-	$lang = array();
+	$lang = [];
 }
 
 // DEVELOPERS PLEASE NOTE
@@ -32,8 +32,12 @@ if (empty($lang) || !is_array($lang))
 // You do not need this where single placeholders are used, e.g. 'Message %d' is fine
 // equally where a string contains only two placeholders which are used to wrap text
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
+//
+// Some characters you may want to copy&paste:
+// ’ « » “ ” …
+//
 
-$lang = array_merge($lang, array(
+$lang = array_merge($lang, [
 	// Portal Modules
 	'ACP_PORTAL_MODULES_EXP'		=> 'Ici vous pouvez gérer les modules de votre portail. Si vous désactivez tous les modules, veuillez désactiver aussi le portail.',
 
@@ -107,4 +111,12 @@ $lang = array_merge($lang, array(
 	// Install
 	'PORTAL_BASIC_INSTALL'			=> 'Ajout d’un ensemble de modules de base',
 	'PORTAL_BASIC_UNINSTALL'		=> 'Suppression des modules de la base de données',
-));
+
+	// Font Awesome
+	'ACP_FA'				=> 'Styles Font Awesome',
+	'ACP_FA_EXP'			=> 'Vous pouvez définir ici les styles qui doivent utiliser les icônes Font Awesome.',
+	'MODULE_FA'				=> 'Icône Font Awesome',
+	'MODULE_FA_EXP'			=> 'Vous pouvez sélectionner ici une icône Font Awesome. Celle-ci sera affichée si le style que vous avez sélectionné utilise des icônes Font Awesome.',
+	'MODULE_FA_SIZE'		=> 'Taille de l’icône Font Awesome',
+	'MODULE_FA_SIZE_EXP'	=> 'Vous pouvez modifier ici la taille de l’icône de Font Awesome en pixels.',
+]);

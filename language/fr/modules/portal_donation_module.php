@@ -1,10 +1,10 @@
 <?php
 /**
 *
-* @package Board3 Portal v2.1 - Donation
-* @copyright (c) 2013 Board3 Group ( www.board3.de )
-* @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
-* @translated into French by Galixte (http://www.galixte.com)
+* @package Board3 Portal v2.3 - Donation
+* @copyright (c) 2023 Board3 Group ( www.board3.de )
+* @license GNU General Public License, version 2 (GPL-2.0-only)
+* French translation by Galixte (https://www.galixte.com)
 *
 */
 
@@ -18,7 +18,7 @@ if (!defined('IN_PHPBB'))
 
 if (empty($lang) || !is_array($lang))
 {
-	$lang = array();
+	$lang = [];
 }
 
 // DEVELOPERS PLEASE NOTE
@@ -37,7 +37,7 @@ if (empty($lang) || !is_array($lang))
 // ’ « » “ ” …
 //
 
-$lang = array_merge($lang, array(
+$lang = array_merge($lang, [
 	'DONATION' 		=> 'Dons PayPal',
 	'DONATION_TEXT'	=> 'est un groupe fournissant des services sans intention de faire du bénéfice. Vos dons sont les bienvenus, pour nous aider à couvrir les différents frais liés à notre serveur, notre nom de domaine, etc..',
 	'PAY_MSG'       => 'Veuillez utiliser un point décimal (et non une virgule) comme séparateur, comme par exemple : 3.50',
@@ -70,4 +70,4 @@ $lang = array_merge($lang, array(
 	'PORTAL_PAY_CUSTOM'						=> 'Ajouter le nom d’utilisateur pour le don PayPal',
 	'PORTAL_PAY_DEFAULT'					=> 'Devise par défaut',
 	'PORTAL_PAY_DEFAULT_EXP'				=> 'Devise sélectionnée par défaut dans la liste des devises.'
-));
+]);

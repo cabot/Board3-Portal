@@ -1,10 +1,10 @@
 <?php
 /**
 *
-* @package Board3 Portal v2.1 - Topposters
-* @copyright (c) 2013 Board3 Group ( www.board3.de )
-* @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
-* @translated into French by Galixte (http://www.galixte.com)
+* @package Board3 Portal v2.3 - Topposters
+* @copyright (c) 2023 Board3 Group ( www.board3.de )
+* @license GNU General Public License, version 2 (GPL-2.0-only)
+* French translation by Galixte (https://www.galixte.com)
 *
 */
 
@@ -18,7 +18,7 @@ if (!defined('IN_PHPBB'))
 
 if (empty($lang) || !is_array($lang))
 {
-	$lang = array();
+	$lang = [];
 }
 
 // DEVELOPERS PLEASE NOTE
@@ -32,11 +32,16 @@ if (empty($lang) || !is_array($lang))
 // You do not need this where single placeholders are used, e.g. 'Message %d' is fine
 // equally where a string contains only two placeholders which are used to wrap text
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
-$lang = array_merge($lang, array(
+//
+// Some characters you may want to copy&paste:
+// ’ « » “ ” …
+//
+
+$lang = array_merge($lang, [
 	'TOPPOSTERS'					=> 'Utilisateurs les plus actifs',
 	'TOPPOSTERS_CONFIG'				=> 'Paramètres des utilisateurs les plus actifs',
 
 	// ACP
 	'NUM_TOPPOSTERS'				=> 'Nombre d’utilisateurs actifs',
 	'NUM_TOPPOSTERS_EXP'			=> 'Saisir le nombre maximum d’utilisateurs actifs à afficher.',
-));
+]);

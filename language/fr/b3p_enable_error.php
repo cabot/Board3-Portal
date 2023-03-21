@@ -1,7 +1,7 @@
 <?php
 /**
 *
-* @package Board3 Portal v2.3 - Stylechanger
+* @package Board3 Portal v2.3
 * @copyright (c) 2023 Board3 Group ( www.board3.de )
 * @license GNU General Public License, version 2 (GPL-2.0-only)
 * French translation by Galixte (https://www.galixte.com)
@@ -38,6 +38,8 @@ if (empty($lang) || !is_array($lang))
 //
 
 $lang = array_merge($lang, [
-	'BOARD_STYLE'			=> 'Style du forum',
-	'STYLE_CHOOSE'			=> 'Sélectionner un style',
+	'BOARD3_PORTAL'							=> 'Board3 Portail',
+	'ERROR_B3P_EXTENSION_NOT_ENABLEABLE'	=> 'L’extension « %s » ne peut pas être activée, veuillez vérifier les prérequis de l’extension.',
+	'ERROR_B3P_MSG_PHPBB_WRONG_VERSION'		=> 'Minimum phpBB %1$s mais inférieur à %2$s',
+	'ERROR_B3P_MSG_PHP_WRONG_VERSION'		=> 'Minimum PHP %1$s mais inférieur à %2$s',
 ]);

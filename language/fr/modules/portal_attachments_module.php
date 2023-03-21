@@ -1,10 +1,10 @@
 <?php
 /**
 *
-* @package Board3 Portal v2.1 - Attachments
-* @copyright (c) 2013 Board3 Group ( www.board3.de )
-* @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
-* @translated into French by Galixte (http://www.galixte.com)
+* @package Board3 Portal v2.3 - Attachments
+* @copyright (c) 2023 Board3 Group ( www.board3.de )
+* @license GNU General Public License, version 2 (GPL-2.0-only)
+* French translation by Galixte (https://www.galixte.com)
 *
 */
 
@@ -18,7 +18,7 @@ if (!defined('IN_PHPBB'))
 
 if (empty($lang) || !is_array($lang))
 {
-	$lang = array();
+	$lang = [];
 }
 
 // DEVELOPERS PLEASE NOTE
@@ -32,7 +32,12 @@ if (empty($lang) || !is_array($lang))
 // You do not need this where single placeholders are used, e.g. 'Message %d' is fine
 // equally where a string contains only two placeholders which are used to wrap text
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
-$lang = array_merge($lang, array(
+//
+// Some characters you may want to copy&paste:
+// ’ « » “ ” …
+//
+
+$lang = array_merge($lang, [
 	'DOWNLOADS'				=> 'Téléchargements',
 	'NO_ATTACHMENTS'		=> 'Aucun fichier joint',
 	'PORTAL_ATTACHMENTS'	=> 'Fichiers joints',
@@ -52,4 +57,4 @@ $lang = array_merge($lang, array(
 	'PORTAL_ATTACHMENTS_FILETYPE_EXP' 				=> 'Type de fichiers qui seront affichés. Laisser vide pour afficher tous les types de fichiers joints. Si « Exclure des types de fichiers » est paramétré sur « Oui », sélectionner les types de fichiers souhaitant être exclus.<br />Si « Exclure des types de fichiers » est paramétré sur « Non », sélectionner les types de fichiers souhaités.<br />Pour sélectionner / désélectionner plusieurs types de fichiers maintenir la touche <samp>CTRL</samp> tout en cliquant.',
 	'PORTAL_ATTACHMENTS_EXCLUDE'						=> 'Exclure des types de fichiers',
 	'PORTAL_ATTACHMENTS_EXCLUDE_EXP'				=> 'Sélectionner « Oui » pour exclure certains types de fichiers joints et « Non » pour voir uniquement certains types fichiers joints.',
-));
+]);

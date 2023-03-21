@@ -1,10 +1,10 @@
 <?php
 /**
 *
-* @package Board3 Portal v2.1 - Calendar
-* @copyright (c) 2013 Board3 Group ( www.board3.de )
-* @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
-* @translated into French by Galixte (http://www.galixte.com)
+* @package Board3 Portal v2.3 - Calendar
+* @copyright (c) 2023 Board3 Group ( www.board3.de )
+* @license GNU General Public License, version 2 (GPL-2.0-only)
+* French translation by Galixte (https://www.galixte.com)
 *
 */
 
@@ -18,7 +18,7 @@ if (!defined('IN_PHPBB'))
 
 if (empty($lang) || !is_array($lang))
 {
-	$lang = array();
+	$lang = [];
 }
 
 // DEVELOPERS PLEASE NOTE
@@ -32,8 +32,13 @@ if (empty($lang) || !is_array($lang))
 // You do not need this where single placeholders are used, e.g. 'Message %d' is fine
 // equally where a string contains only two placeholders which are used to wrap text
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
-$lang = array_merge($lang, array(
-	'PORTAL_CALENDAR'			=> 'Calendrier',
+//
+// Some characters you may want to copy&paste:
+// ’ « » “ ” …
+//
+
+$lang = array_merge($lang, [
+	'PORTAL_CALENDAR'		=> 'Calendrier',
 	'VIEW_NEXT_MONTH'		=> 'Mois prochain',
 	'VIEW_PREVIOUS_MONTH'	=> 'Mois précédent',
 	'EVENT_START'			=> 'Depuis',
@@ -45,8 +50,8 @@ $lang = array_merge($lang, array(
 	'UPCOMING_EVENTS'		=> 'Événements à venir',
 	'NO_UPCOMING_EVENTS'	=> 'Aucun événement à venir',
 
-	'mini_cal'	=> array(
-		'day'	=> array(
+	'mini_cal'	=> [
+		'day'	=> [
 			'1'	=> 'Di',
 			'2'	=> 'Lu',
 			'3'	=> 'Ma',
@@ -54,9 +59,9 @@ $lang = array_merge($lang, array(
 			'5'	=> 'Je',
 			'6'	=> 'Ve',
 			'7'	=> 'Sa',
-		),
+		],
 
-		'month'	=> array(
+		'month'	=> [
 			'1'	=> 'Jan.',
 			'2'	=> 'Fev.',
 			'3'	=> 'Mar.',
@@ -69,9 +74,9 @@ $lang = array_merge($lang, array(
 			'10'=> 'Oct.',
 			'11'=> 'Nov.',
 			'12'=> 'Dec.',
-		),
+		],
 
-		'long_month'=> array(
+		'long_month'=> [
 			'1'	=> 'Janvier',
 			'2'	=> 'Février',
 			'3'	=> 'Mars',
@@ -84,8 +89,8 @@ $lang = array_merge($lang, array(
 			'10'=> 'Octobre',
 			'11'=> 'Novembre',
 			'12'=> 'Décembre',
-		),
-	),
+		],
+	],
 
 	// ACP
 	'ACP_PORTAL_CALENDAR'					=> 'Paramètres du calendrier',
@@ -129,4 +134,4 @@ $lang = array_merge($lang, array(
 	'LOG_PORTAL_EVENT_UPDATED'				=> '<strong>Évènement mis à jour</strong><br />&raquo; %s',
 	'LOG_PORTAL_EVENT_ADDED'				=> '<strong>Évènement ajouté</strong><br />&raquo; %s',
 	'LOG_PORTAL_EVENT_REMOVED'				=> '<strong>Évènement retiré</strong><br />&raquo; %s',
-));
+]);
