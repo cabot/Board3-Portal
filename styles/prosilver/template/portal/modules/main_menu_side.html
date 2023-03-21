@@ -12,7 +12,7 @@
 			<div class="menutitle">{{ category.CAT_TITLE }}</div>
 			<ul>
 				{% for links in category.links %}
-				<li><a href="{{ links.LINK_URL }}" role="menuitem" {% if links.NEW_WINDOW %}onclick="window.open('{{ links.LINK_URL }}'); return false;"{% endif %}><i class="icon fa-arrow-circle-o-right fa-fw" aria-hidden="true"></i><span>{{ links.LINK_TITLE }}</span></a></li>
+				<li><a href="{{ links.LINK_URL }}" role="menuitem" {% if links.NEW_WINDOW %}onclick="window.open('{{ links.LINK_URL }}'); return false;"{% endif %}><i class="icon fa-arrow-circle-o-{S_CONTENT_FLOW_END} fa-fw" aria-hidden="true"></i><span>{{ links.LINK_TITLE }}</span></a></li>
 				{% endfor %}
 			</ul>
 		  <hr class="dashed" />
