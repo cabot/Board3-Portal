@@ -10,7 +10,7 @@
 		<div class="portal-navigation">
 			<ul>
 				{% for links in portal_links.links %}
-				<li><a href="{{ links.LINK_URL }}" title="{{ links.LINK_TITLE }}" {% if links.NEW_WINDOW %}onclick="window.open('{{ links.LINK_URL }}'); return false;"{% endif %}><i class="icon fa-arrow-circle-o-right fa-fw" aria-hidden="true"></i><span>{{ links.LINK_TITLE }}</span></a></li>
+				<li><a href="{{ links.LINK_URL }}" title="{{ links.LINK_TITLE }}" {% if links.NEW_WINDOW %}onclick="window.open('{{ links.LINK_URL }}'); return false;"{% endif %}><i class="icon fa-arrow-circle-o-{S_CONTENT_FLOW_END} fa-fw" aria-hidden="true"></i><span>{{ links.LINK_TITLE }}</span></a></li>
 				{% else %}
 				<span class="portal-title-span gensmall"><strong>{{ lang('LINKS_NO_LINKS') }}</strong></span><br />
 			{% endfor %}
