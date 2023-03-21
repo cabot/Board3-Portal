@@ -2,8 +2,8 @@
 ---------------------------------------------------------------------------- */
 #portal-body {
 /* Default values */
-	--left-col-width: 180px;
-	--right-col-width: 180px;
+	--left-col-width: 200px; 
+	--right-col-width: 200px;
 	--left-col-order: 1;
 	---main-col-order: 2;
 	--right-col-order: 3;
@@ -13,6 +13,7 @@
 	display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: stretch;
 	padding-top: 10px;
 }
 
@@ -54,17 +55,14 @@
 
 .portal-center-wrapper ul.topiclist dt {
 	flex: 0 1 100%;
-	margin: 0;
+	margin-right: 0;
 }
 
-.portal-center-wrapper li.header dt .list-inner,
-.portal-center-wrapper ul.topiclist dt .list-inner {
-	margin: 0;
+.portal-center-wrapper li.header dt .list-inner, .portal-center-wrapper ul.topiclist dt .list-inner {
+	margin-right: 0;
 }
 
-.portal-center-wrapper dd.posts,
-.portal-center-wrapper dd.views,
-.portal-center-wrapper dd.topics {
+.portal-center-wrapper dd.posts, .portal-center-wrapper dd.topics, .portal-center-wrapper dd.views {
 	flex: 0 0 95px;
 }
 
@@ -74,6 +72,7 @@
 
 /* main menu, user menu and the links
 ---------------------------------------------------------------------------- */
+
 .content li {
 	list-style-type: inherit !important;
 }
@@ -295,8 +294,9 @@ p.portal-side-poll-subtext {
 	margin-left: 3px;
 }
 
-/* Calendar CSS rules
----------------------------------------------------------------------------- */
+/**
+* Calendar CSS rules
+*/
 .portal-calendar-go-previous {
 	text-align: left;
 }
@@ -346,14 +346,6 @@ p.portal-side-poll-subtext {
 	margin: 5px 0;
 	border-top: 0;
 }
-
-/*
-* top spacing between portal body table and headerbar spacing is usually 10px
-*/
-/* #portal-body {
-	padding-top: 10px;
-	width: 100%;
-} */
 
 .portal-side {
 	margin: 5px 5px 5px 5px
@@ -411,14 +403,12 @@ p.portal-side-poll-subtext {
 	clear: both;
 }
 
-ul.responsive-portal-news dd:last-of-type,
-ul.responsive-portal-announcements dd:last-of-type,
+ul.responsive-portal-news dd:last-of-type, ul.responsive-portal-announcements dd:last-of-type,
 #portal-forumlist ul dd:last-of-type {
 	width: 25%;
 }
 
-dd.responsive-portal-news:last-of-type,
-dd.responsive-portal-announcements:last-of-type {
+dd.responsive-portal-news:last-of-type, dd.responsive-portal-announcements:last-of-type {
 	width: 25%;
 }
 
